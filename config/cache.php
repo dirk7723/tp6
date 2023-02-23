@@ -25,5 +25,20 @@ return [
             'serialize'  => [],
         ],
         // 更多的缓存连接
+        'redis'	=>	[
+            'type'	=>	'redis',
+            'host'	=>	env('redis.host', '127.0.0.1'),
+            // 全局缓存有效期（0为永久有效）
+            'expire'=>  0,
+            'select' => 1,
+            // 缓存前缀
+            'prefix'=>  '',
+            // 端口
+            'port'=>  env('redis.port', '6379'),
+            // 用户名
+            'username'=>  env('redis.username', ''),
+            // 密码
+            'password'=>  env('redis.password', ''),
+        ],
     ],
 ];
